@@ -1,0 +1,47 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+AllCops:
+  TargetRubyVersion: 3.1.0
+  NewCops: enable
+  Exclude:
+    - "app/views/**/*"
+    - "bin/**/*"
+    - "config/**/*"
+    - "db/**/*"
+    - "log/**/*"
+    - "public/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+
+# Metrics Cops
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Max: 100
+  Enabled: true
+
+# Style Cops
+Style/BlockDelimiters:
+  Exclude:
+    - 'spec/**/*'
+
+Style/FrozenStringLiteralComment:
+  Description: >-
+    Add the frozen_string_literal comment to the top of files
+    to help transition from Ruby 2.3.0 to Ruby 3.0.
+  Enabled: false
+
+# Layout Cops
+Layout/ArgumentAlignment:
+  Exclude:
+    - 'config/initializers/*'
+
+Layout/LineLength:
+  Description: 'Limit lines to 80 characters.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#80-character-limits'
+  Max: 80
+
+# Fix issue with windows line endings (CRLF) on a unix (LF)
+Layout/EndOfLine:
+  Enabled: False
