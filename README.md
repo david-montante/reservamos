@@ -1,5 +1,5 @@
-## MS_TEMPLATE
-App template for Microservices.
+## Reservamos Code Challengue
+An application that returns the forecast of destinations.
 
 
 ### Components
@@ -15,6 +15,9 @@ Rename the `.env.example` file to `.env` and replace any ENV VARS value you need
 
 **Please add in `.env.example` any new ENV VARS.**
 
+### Try the solution
+You can make real API requests to https://reservamos-aebd44aeec1b.herokuapp.com/weather/forecast/:city
+For example: https://reservamos-aebd44aeec1b.herokuapp.com/weather/forecast/aca
 
 ### Install Instructions
 
