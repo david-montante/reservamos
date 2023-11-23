@@ -6,7 +6,9 @@ if Rails.env.production?
 end
 require 'rspec/rails'
 require 'database_cleaner'
+# rubocop:disable Style/MixinUsage
 include ActiveJob::TestHelper
+# rubocop:enable Style/MixinUsage
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 begin
