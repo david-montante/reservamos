@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  apipie
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :weather, only: [] do
+    collection do
+      get 'forecast/:city_name', to: 'weather#forecast', as: 'forecast'
+    end
+  end
 end
